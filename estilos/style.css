@@ -13,3 +13,47 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+:root{
+  --fundo-principal: #f5f5f5;
+  --texto: #222222;
+  --texto-inverso: #ffffff;
+  --destaque: #0077ff;
+  --destaque-inverso: #66bbff;
+  --fundo-card: #ffffff;
+}
+
+/*Configuração MOBILE FIRST*/
+
+header{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content:flex-end;
+
+  background-color: var(--destaque);
+  padding: 10px;
+
+}
+
+header nav a{
+  color: white;
+}
+
+main{
+  display: grid;
+  grid-template-columns:10px 1fr 10px;
+}
+
+#ficha,#detalhes{
+  grid-column: 2/3;
+}
+
+#ficha>#foto{
+  border-radius: 50%;
+  width: 200px;
+  aspect-ratio: 1/1;
+  outline: 5px solid var(--destaque);
+  display: block;
+  margin: auto;
+  object-fit: cover;
+}
