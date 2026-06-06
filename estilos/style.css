@@ -25,6 +25,13 @@
 
 /*Configuração MOBILE FIRST*/
 
+body{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 1.5em;
+  background-color: var(--fundo-principal);
+  color: var(--texto);
+}
+
 header{
   display: flex;
   flex-flow: row nowrap;
@@ -37,23 +44,61 @@ header{
 
 header nav a{
   color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+header nav a:hover{
+  background-color: var(--destaque-inverso);
+  transition-duration: 0.5s;
 }
 
 main{
   display: grid;
-  grid-template-columns:10px 1fr 10px;
+  grid-template-columns:10px 200px 1fr 10px;
 }
 
 #ficha,#detalhes{
-  grid-column: 2/3;
+  background-color: var(--fundo-card);
+  grid-column: 2/4;
 }
 
 #ficha>#foto{
+  display: block;
+  margin: auto;
+  margin-top: 10px;
   border-radius: 50%;
   width: 200px;
   aspect-ratio: 1/1;
-  outline: 5px solid var(--destaque);
-  display: block;
-  margin: auto;
   object-fit: cover;
+  border: 5px solid var(--fundo-card);
+  outline: 5px solid var(--destaque);
+}
+
+#ficha>h1{
+  color: var(--destaque);
+  margin: 15px 0px;
+  text-align: left;
+}
+
+#ficha>.container-social-media{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.container-social-media>.social-media{
+  margin: 10px;
+  padding: 5px;
+}
+
+#social{
+  color: var(--destaque);
+}
+
+#social:hover{
+  color: var(--destaque-inverso);
+  transition-duration: 0.2s;
 }
